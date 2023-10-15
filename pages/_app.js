@@ -8,5 +8,5 @@ function MyApp({ Component, pageProps }) {
     </Layout>
   );
 }
-
+// zmiana pod committa do poprawy
 export default MyApp;
