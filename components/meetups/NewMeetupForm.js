@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
@@ -8,6 +8,7 @@ function NewMeetupForm(props) {
   const imageInputRef = useRef();
   const addressInputRef = useRef();
   const descriptionInputRef = useRef();
+  const [isSending, setIsSending]=useState(false);
 
   function submitHandler(event) {
     event.preventDefault();
@@ -25,6 +26,7 @@ function NewMeetupForm(props) {
     };
 
     props.onAddMeetup(meetupData);
+    setIsSending(true);
   }
 
   return (

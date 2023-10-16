@@ -1,6 +1,8 @@
 import MeetupList from "../components/meetups/MeetupList";
 import Layout from "../components/layout/Layout";
 import { useEffect, useState } from "react";
+import {MongoClient} from 'mongodb';
+import Head from 'next/head';
 
 const DUMMY_MEETUPS = [
   {
@@ -28,7 +30,11 @@ const Home = () => {
   }, []);
   return (
     <>
-      <MeetupList meetups={loadedMeetups} />
+      <Head>
+        <title>React meetups</title>
+        <meta name='description' content="Jakiś tam content"/>
+      </Head>
+      <MeetupList meetups={props.meetups} />
     </>
   );
 };
