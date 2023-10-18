@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import MeetupList from "../../components/meetups/MeetupList";
+//import MeetupList from "../../components/meetups/MeetupList";
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -16,7 +16,7 @@ const NewMeetup = () => {
       }
     });
     const data= await response.json();
-    router.push('/')
+    router.push('/');
   };
   return (
     <Fragment>
