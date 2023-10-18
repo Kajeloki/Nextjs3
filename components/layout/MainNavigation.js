@@ -1,5 +1,5 @@
 import classes from './MainNavigation.module.css';
-import Link from 'next';
+import Link from 'next/Link';
 
 function MainNavigation() {
 
