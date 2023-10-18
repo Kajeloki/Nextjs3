@@ -32,18 +32,7 @@ export async function getStaticPaths() {
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
-    // [
-    //   {
-    //     params: {
-    //       meetupId: 'm1'
-    //     }
-    //   },
-    //   {
-    //     params:{
-    //       meetupId: 'm2'
-    //     }
-    //   }
-    // ]
+   
   };
 }
 
